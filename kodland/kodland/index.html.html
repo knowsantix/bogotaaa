@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre Bogotá - Portal Turístico y Cultural</title>
+    <link rel="stylesheet" href="index.css.css">
+</head>
+<body>
+
+    <div class="barra-accesibilidad">
+        <div class="contenedor-accesibilidad">
+            <span id="saludo-usuario">¡Bienvenido viajero!</span>
+            <button onclick="cambiarTema()" class="btn-mini" id="btn-tema">🌙 Modo Oscuro</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-contenido">
+            <h1>🏙️ Descubre Bogotá 🇨🇴</h1>
+            <p>Atenas Sudamericana • 2.640 metros más cerca de las estrellas</p>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#lugares">Lugares</a></li>
+                    <li><a href="#gastronomia">Gastronomía</a></li>
+                    <li><a href="#agenda">Agenda Cultural</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="hero">
+            <h2>✨ Explora la Capital de Colombia ✨</h2>
+            <p>Una metrópolis vibrante donde la historia colonial se funde con la modernidad urbana, rodeada por los majestuosos Cerros Orientales.</p>
+            <div class="hero-stats">
+                <div class="stat-item"><strong>+8 Millones</strong><p>Habitantes</p></div>
+                <div class="stat-item"><strong>2.640 msnm</strong><p>Altitud</p></div>
+                <div class="stat-item"><strong>1538</strong><p>Año de Fundación</p></div>
+            </div>
+        </section>
+
+        <section id="inicio">
+            <h2>Bienvenido a Bogotá</h2>
+            <div class="layout-dos-columnas">
+                <div class="columna-texto">
+                    <p>Bogotá es el corazón latente de Colombia. Una ciudad multicultural donde convergen personas de todas las regiones del país, creando una amalgama única de tradiciones, acentos y expresiones artísticas.</p>
+                    <p>Desde el frío místico de sus mañanas hasta la calidez de su oferta nocturna, la capital te ofrece museos de clase mundial, una gastronomía de vanguardia y una red de ciclorrutas que es ejemplo global.</p>
+                </div>
+                <div class="columna-imagen">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Panorama_de_Bogot%C3%A1.jpg/1280px-Panorama_de_Bogot%C3%A1.jpg" alt="Panorama urbano de Bogotá" class="imagen-bogota">
+                </div>
+            </div>
+        </section>
+
+        <section id="historia">
+            <h2>📜 Línea del Tiempo e Historia</h2>
+            <p>Haz clic en las pestañas para explorar las diferentes épocas que moldearon la capital actual:</p>
+            
+            <div class="tabs-contenedor">
+                <div class="tabs-botones">
+                    <button class="tab-btn activa" onclick="cambiarTab(event, 'precolombina')">Precolombina</button>
+                    <button class="tab-btn" onclick="cambiarTab(event, 'colonial')">Colonia</button>
+                    <button class="tab-btn" onclick="cambiarTab(event, 'independencia')">Independencia</button>
+                    <button class="tab-btn" onclick="cambiarTab(event, 'moderna')">Moderna</button>
+                </div>
+                
+                <div id="precolombina" class="tab-contenido activa">
+                    <h3>El territorio de Bacatá y los Muiscas</h3>
+                    <p>Antes de 1538, la sabana de Bogotá estaba habitada por la confederación Muisca. Este pueblo indígena, perteneciente a la familia lingüística Chibcha, era un pueblo agrícola, experto en la orfebrería y la explotación de sal y esmeraldas. ElZipa gobernaba el territorio sur desde lo que hoy conocemos como Funza.</p>
+                </div>
+                
+                <div id="colonial" class="tab-contenido">
+                    <h3>Fundación y el Virreinato (1538 - 1810)</h3>
+                    <p>Fundada el 6 de agosto de 1538 por Gonzalo Jiménez de Quesada bajo el nombre de Santa Fe de Bogotá. Se convirtió en la capital del Nuevo Reino de Granada. Durante este periodo se construyeron los templos e iglesias del centro histórico y la arquitectura de tejas de barro y paredes de tapia pisada.</p>
+                </div>
+                
+                <div id="independencia" class="tab-contenido">
+                    <h3>El Grito de Independencia (1810)</h3>
+                    <p>El 20 de julio de 1810, el centro de la ciudad fue el escenario del famoso incidente del "Florero de Llorente", desencadenando el grito de independencia. Tras la batalla de Boyacá en 1819, Simón Bolívar consolidó a Bogotá como la gran capital de la República de la Gran Colombia.</p>
+                </div>
+                
+                <div id="moderna" class="tab-contenido">
+                    <h3>Siglo XX y Siglo XXI</h3>
+                    <p>La ciudad sufrió una transformación radical tras el Bogotazo en 1948. En las décadas siguientes, experimentó una explosión demográfica y un crecimiento de infraestructura masivo, convirtiéndose en el epicentro financiero, industrial y universitario del país.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lugares">
+            <h2>⛰️ Destinos e Imperdibles</h2>
+            <p>Filtra los lugares de interés según tu tipo de viaje:</p>
+            
+            <div class="filtros-galeria">
+                <button class="btn-filtro activo" onclick="filtrarGaleria('todos')">Todos</button>
+                <button class="btn-filtro" onclick="filtrarGaleria('cultura')">Cultura & Museos</button>
+                <button class="btn-filtro" onclick="filtrarGaleria('naturaleza')">Naturaleza</button>
+                <button class="btn-filtro" onclick="filtrarGaleria('historia')">Histórico</button>
+            </div>
+
+            <div class="galeria" id="galeria-destinos">
+                <div class="tarjeta historia">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Monserrate_Bogota.jpg" alt="Santuario de Monserrate">
+                    <div class="tarjeta-info">
+                        <span class="tag">Histórico / Religioso</span>
+                        <h3>Cerro de Monserrate</h3>
+                        <p>Ubicado a 3.152 metros de altura. Puedes subir en teleférico, funicular o por el sendero peatonal.</p>
+                    </div>
+                </div>
+                <div class="tarjeta historia">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Plaza_de_Bolivar_Bogota.jpg/1280px-Plaza_de_Bolivar_Bogota.jpg" alt="Plaza de Bolívar">
+                    <div class="tarjeta-info">
+                        <span class="tag">Histórico</span>
+                        <h3>Plaza de Bolívar</h3>
+                        <p>El epicentro político donde convergen el Capitolio Nacional, el Palacio de Justicia y la Catedral Primada.</p>
+                    </div>
+                </div>
+                <div class="tarjeta cultura">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Bogota_Museo_del_Oro.JPG/800px-Bogota_Museo_del_Oro.JPG" alt="Museo del Oro">
+                    <div class="tarjeta-info">
+                        <span class="tag">Cultura</span>
+                        <h3>Museo del Oro</h3>
+                        <p>Alberga la colección de orfebrería prehispánica más grande del planeta, incluyendo el famoso Poporo Quimbaya.</p>
+                    </div>
+                </div>
+                <div class="tarjeta cultura">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Bogota_-_Barrio_La_Candelaria.jpg/1280px-Bogota_-_Barrio_La_Candelaria.jpg" alt="Barrio La Candelaria">
+                    <div class="tarjeta-info">
+                        <span class="tag">Cultura / Histórico</span>
+                        <h3>Barrio La Candelaria</h3>
+                        <p>El centro colonial, caracterizado por sus calles empinadas empedradas, arte urbano, cafés bohemios y museos.</p>
+                    </div>
+                </div>
+                <div class="tarjeta naturaleza">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1_02.jpg/1280px-Jard%C3%ADn_Bot%C3%A1nico_de_Bogot%C3%A1_02.jpg" alt="Jardín Botánico">
+                    <div class="tarjeta-info">
+                        <span class="tag">Naturaleza</span>
+                        <h3>Jardín Botánico José Celestino Mutis</h3>
+                        <p>Un oasis natural urbano enfocado en la conservación de la flora andina y de los ecosistemas del páramo.</p>
+                    </div>
+                </div>
+                <div class="tarjeta naturaleza">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Simon_bolivar_park.jpg/1280px-Simon_bolivar_park.jpg" alt="Parque Simón Bolívar">
+                    <div class="tarjeta-info">
+                        <span class="tag">Naturaleza</span>
+                        <h3>Parque Metropolitano Simón Bolívar</h3>
+                        <p>El pulmón verde de la ciudad, con un inmenso lago central, pistas de entrenamiento y plazas de conciertos gigantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gastronomia">
+            <h2>🍲 Sabores Autóctonos</h2>
+            <p>La gastronomía bogotana es perfecta para combatir el clima templado y frío de la sabana. No te vayas sin probar:</p>
+            <div class="grid-gastronomia">
+                <div class="item-comida">
+                    <div class="icono-comida">🥣</div>
+                    <div>
+                        <h4>El Ajiaco Santafereño</h4>
+                        <p>Sopa espesa elaborada con tres tipos de papas, pollo, mazorca, guascas, servida con crema de leche y alcaparras.</p>
+                    </div>
+                </div>
+                <div class="item-comida">
+                    <div class="icono-comida">☕</div>
+                    <div>
+                        <h4>Chocolate Completo</h4>
+                        <p>Chocolate caliente oscuro tradicional acompañado de pan, almojábana y queso campesino para derretir dentro de la taza.</p>
+                    </div>
+                </div>
+                <div class="item-comida">
+                    <div class="icono-comida">🍵</div>
+                    <div>
+                        <h4>La Changua</h4>
+                        <p>Caldo tradicional a base de leche, agua, cilantro, cebolla, huevo y pan tostado. El desayuno clásico de los abuelos.</p>
+                    </div>
+                </div>
+                <div class="item-comida">
+                    <div class="icono-comida">🫔</div>
+                    <div>
+                        <h4>Tamal Bogotano</h4>
+                        <p>Masa de maíz rellena de carne de res, cerdo, pollo, garbanzos y zanahoria, envuelta y cocida en hojas de plátano.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="agenda">
+            <h2>📅 Grandes Eventos Anuales</h2>
+            <p>Bogotá es el centro cultural de la nación. Estos son sus festivales más masivos e internacionales:</p>
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Evento</th>
+                            <th>Mes Estimado</th>
+                            <th>Lugar Principal</th>
+                            <th>Tipo de Entrada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>FILBO</strong> (Feria del Libro)</td>
+                            <td>Abril - Mayo</td>
+                            <td>Corferias</td>
+                            <td>De Pago</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rock al Parque</strong></td>
+                            <td>Noviembre</td>
+                            <td>Parque Simón Bolívar</td>
+                            <td>Totalmente Gratis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Festival Iberoamericano de Teatro</strong></td>
+                            <td>Marzo - Abril (Cada 2 años)</td>
+                            <td>Múltiples teatros y calles</td>
+                            <td>Mixto</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jazz al Parque</strong></td>
+                            <td>Septiembre</td>
+                            <td>Parque El Country</td>
+                            <td>Totalmente Gratis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Festival de Cine de Bogotá</strong></td>
+                            <td>Octubre</td>
+                            <td>Salas asociadas</td>
+                            <td>De Pago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="curiosidades">
+            <h2>⭐ Módulo Interactivo de Curiosidades</h2>
+            <div class="consola-interactiva">
+                <div class="panel-pantalla">
+                    <p id="dato">Haz clic en los botones inferiores para ejecutar las funciones web interactivas.</p>
+                </div>
+                <div class="panel-controles">
+                    <button onclick="mostrarDato()" class="btn-consola">🎲 Generar Dato</button>
+                    <button onclick="mostrarHora()" class="btn-consola">🕒 Consultar Hora</button>
+                    <button onclick="simularClima()" class="btn-consola">⛅ Estado del Clima</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>✉️ Planifica tu Visita / Contacto</h2>
+            <p>¿Tienes dudas sobre tu próximo viaje a Bogotá? Escríbenos y recibe una guía digital gratuita.</p>
+            <form id="formulario-contacto" onsubmit="validarFormulario(event)">
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="interes">¿Qué es lo que más te llama la atención?</label>
+                    <select id="interes">
+                        <option value="historia">Historia Colonial</option>
+                        <option value="gastronomia">Ruta Gastronómica</option>
+                        <option value="museos">Museos y Cultura</option>
+                        <option value="naturaleza">Senderismo y Cerros</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="mensaje">Mensaje o Pregunta:</label>
+                    <textarea id="mensaje" rows="4" placeholder="Escribe aquí tus inquietudes..." required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">🚀 Enviar Solicitud</button>
+            </form>
+            <div id="feedback-formulario" class="oculto"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Descubre Bogotá</h3>
+                <p>Un portal web interactivo dedicado a promover el turismo cultural, histórico y gastronómico de la capital colombiana.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#lugares">Lugares</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Créditos del Desarrollador</h3>
+                <p>Diseñado y Programado por:</p>
+                <strong>Santiago Jiménez</strong>
+                <p>© 2026 - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="parte 3.js"></script>
+</body>
+</html>
